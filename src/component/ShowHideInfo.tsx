@@ -5,27 +5,14 @@ function ShowHideInfo() {
 
   return (
     <div>
-      <h2 className="mb-4 text-2xl font-bold">Show/Hide</h2>
-      <button
-        type="button"
-        onClick={() => setIsShow((currentIsShow) => !currentIsShow)}
-        aria-expanded={isShow}
-        className="rounded-lg bg-blue-600 px-4 py-2 font-semibold text-white hover:bg-blue-700"
-      >
+      <h2>Show/Hide</h2>
+      <button onClick={() => setIsShow(!isShow)}>
         {isShow ? "Ẩn thông tin" : "Hiển thị thông tin"}
       </button>
       {isShow && (
-        <div className="mt-4 space-y-1 rounded-lg bg-slate-50 p-4">
+        <div>
           <p>Tên: Nguyễn Văn A</p>
-          <p>
-            Email:{" "}
-            <a
-              className="text-blue-700 underline"
-              href="mailto:example@gmail.com"
-            >
-              example@gmail.com
-            </a>
-          </p>
+          <p>Email: example@gmail.com</p>
         </div>
       )}
     </div>

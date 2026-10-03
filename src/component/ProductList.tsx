@@ -7,12 +7,8 @@ interface ProductListProps {
 }
 
 function ProductList({ products, onDelete }: ProductListProps) {
-  if (products.length === 0) {
-    return <p className="mt-6 text-slate-500">Chưa có sản phẩm nào.</p>;
-  }
-
   return (
-    <ul className="mt-6 space-y-3">
+    <ul>
       {products.map((product) => (
         <ProductItem
           key={product.id}

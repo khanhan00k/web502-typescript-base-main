@@ -8,12 +8,8 @@ interface TodoListProps {
 }
 
 function TodoList({ todos, onToggle, onDelete }: TodoListProps) {
-  if (todos.length === 0) {
-    return <p className="mt-5 text-slate-500">Chưa có Todo nào.</p>;
-  }
-
   return (
-    <ul className="mt-5 space-y-2">
+    <ul>
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}

@@ -1,18 +1,22 @@
+import { Link } from "react-router-dom";
+
 function Header() {
   return (
-    <header className="bg-blue-700 text-white shadow">
-      <div className="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-        <a href="#" className="text-xl font-bold">
-          WEB502 - Bài tập React
-        </a>
-        <nav aria-label="Điều hướng bài tập" className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
-          <a href="#counter" className="hover:text-blue-200">Counter</a>
-          <a href="#show-hide" className="hover:text-blue-200">Show/Hide</a>
-          <a href="#todo" className="hover:text-blue-200">Todo</a>
-          <a href="#products" className="hover:text-blue-200">Sản phẩm</a>
-        </nav>
+    <nav className="bg-blue-600 text-white shadow">
+      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <Link to="#" className="text-xl font-semibold">
+          <strong>WEB502 App</strong>
+        </Link>
+        <div className="hidden md:flex items-center space-x-8">
+          <Link to="#" className="hover:text-gray-200">
+            Trang chủ
+          </Link>
+          <Link to="#" className="hover:text-gray-200">
+            Danh sách
+          </Link>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 }
 
