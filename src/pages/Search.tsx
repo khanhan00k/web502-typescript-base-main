@@ -2,7 +2,7 @@ interface Search {
     searchQuery: string,
     setsearchQuery: (value: string)=> void;
 }
-function Search({searchQuery, setsearchQuery}: searchProps){
+function Search({searchQuery, setsearchQuery}: Search){
     return(
         <div>
             <input
